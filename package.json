@@ -35,5 +35,13 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "codegenConfig": {
+    "name": "ToastModuleSpec",
+    "type": "modules",
+    "jsSrcsDir": "src/turbomodules",
+    "android": {
+      "javaPackageName": "com.turbomodulernexample.toastmodule"
+    }
   }
 }
