@@ -11,6 +11,8 @@ import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
+import com.turbomodulernexample.loggingmodule.LoggingModule
+import com.turbomodulernexample.loggingmodule.LoggingModulePackage
 import com.turbomodulernexample.toastmodule.ToastModulePackage
 
 class MainApplication : Application(), ReactApplication {
@@ -22,6 +24,7 @@ class MainApplication : Application(), ReactApplication {
               // Packages that cannot be autolinked yet can be added manually here, for example:
               // add(MyReactNativePackage())
                 add(ToastModulePackage())
+                add(LoggingModulePackage())
             }
 
         override fun getJSMainModuleName(): String = "index"

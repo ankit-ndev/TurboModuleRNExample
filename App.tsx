@@ -8,6 +8,7 @@ import {
   View,
 } from "react-native";
 import ToastModule from "./src/turbomodules/NativeToastModule";
+import NativeLoggingModule from "./src/turbomodules/NativeLoggingModule";
 
 function App(): React.JSX.Element {
   const showShortToast = () => {
@@ -16,6 +17,12 @@ function App(): React.JSX.Element {
 
   const showLongToast = () => {
     ToastModule?.show("This is a long Toast!", "LONG");
+  };
+
+  const printNativeLogs = () => {
+    NativeLoggingModule?.nativeLog(
+      "Hello there, welcome to turbo modules native logs"
+    );
   };
 
   return (
@@ -28,6 +35,9 @@ function App(): React.JSX.Element {
           </Pressable>
           <Pressable style={styles.button} onPress={showLongToast}>
             <Text style={styles.buttonTitle}>Long Toast</Text>
+          </Pressable>
+          <Pressable style={styles.button} onPress={printNativeLogs}>
+            <Text style={styles.buttonTitle}>Print logs</Text>
           </Pressable>
         </View>
       </ScrollView>
